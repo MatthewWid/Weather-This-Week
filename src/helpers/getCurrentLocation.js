@@ -8,7 +8,9 @@ function getLocation() {
 
 	// https://stackoverflow.com/a/22519785/2954591
 	return new Promise((resolve, reject) => {
-		navigator.geolocation.getCurrentPosition(resolve, reject);
+		navigator.geolocation.getCurrentPosition(resolve, reject, {
+			timeout: 10000
+		});
 	});
 }
 

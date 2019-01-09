@@ -4,10 +4,7 @@ import config from "../config";
 import getLocation from "../helpers/getCurrentLocation";
 import WeatherInformation from "./WeatherInformation";
 
-// fetch(`https://api.openweathermap.org/data/2.5/forecast?q=sydney,au&units=metric&appid=${config.API_KEY}`).then(stream => stream.json())
-// .then((weather) => {
-// 	console.log(weather);
-// });
+// TODO: API wrapper for making API calls with typing fetch(url)... every time
 
 class App extends Component {
 	constructor(props) {
@@ -20,16 +17,22 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		getLocation()
+		window.myVar = getLocation()
 			.then((location) => {
 				const {latitude, longitude} = location.coords;
 
-				fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${config.API_KEY}`).then(stream => stream.json())
-					.then((weather) => {
-						this.setState({
-							currentWeather: weather
-						})
+				Promise.all([
+					fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${config.API_KEY}`).then(stream => stream.json()),
+					fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${config.API_KEY}`).then(stream => stream.json())
+				]).then((values) => {
+					this.setState({
+						currentWeather: values[0], // weather at this very moment
+						weeklyForecast: values[1] // weekly forecast
 					});
+				})
+				.catch((err) => {
+					console.error("Error querying API.");
+				});
 			})
 			.catch((res) => {
 				console.warn("Unable to obtain user's geographical location. Continuing without default state.");
@@ -37,9 +40,17 @@ class App extends Component {
 	}
 
 	render() {
+		let info;
+		if (this.state.currentWeather && this.state.weeklyForecast) {
+			info = <WeatherInformation current={this.state.currentWeather} forecast={this.state.weeklyForecast} />;
+		} else {
+			// TODO: Loading spinner
+			info = <p>Loading...</p>
+		}
+
 		return (
 			<div className="App">
-				<WeatherInformation current={this.state.currentWeather} forecast={this.state.weeklyForecast} />
+				{info}
 			</div>
 		);
 	}

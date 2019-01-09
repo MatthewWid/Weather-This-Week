@@ -6,8 +6,6 @@ class WeatherInformation extends Component {
 	render() {
 		return (
 			<div className="weather-info">
-				<p>Weather Information</p>
-
 				<TodayInformation current={this.props.current} />
 				<WeekInformation forecast={this.props.forecast} />
 			</div>

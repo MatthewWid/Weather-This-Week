@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import TodayInformation from "./TodayInformation";
-import WeekInformation from "./WeekInformation";
+import WeekInformation from "./WeekForecast";
 
 class WeatherInformation extends Component {
 	render() {

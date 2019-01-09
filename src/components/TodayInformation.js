@@ -7,10 +7,25 @@ class TodayInformation extends Component {
 		console.log(weather);
 
 		return (
-			<div className="weather-today">
-				<p>Temperature: {weather.main.temp}</p>
-				<p>Humidity: {weather.main.humidity}</p>
-			</div>
+			<section className="weather-today">
+				<h1 className="weather-today__section weather-today__title">{weather.name}</h1>
+				<div className="weather-today__section weather-today__data">
+					<div className="weather-today__data-value">{parseInt(weather.main.temp)}°C</div>
+					<div className="weather-today__data-key">Temperature</div>
+				</div>
+				<div className="weather-today__section weather-today__data">
+					<div className="weather-today__data-value">{weather.main.humidity}%</div>
+					<div className="weather-today__data-key">Humidity</div>
+				</div>
+				<div className="weather-today__section weather-today__data">
+					<div className="weather-today__data-value">{weather.clouds.all}%</div>
+					<div className="weather-today__data-key">Cloudiness</div>
+				</div>
+				<div className="weather-today__section weather-today__data">
+					<div className="weather-today__data-value">{weather.wind.speed}m/s</div>
+					<div className="weather-today__data-key">Wind Speed</div>
+				</div>
+			</section>
 		);
 	}
 }

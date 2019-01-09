@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class WeekInformation extends Component {
 	render() {
 		return (
-			<p>WeekInformation</p>
+			<React.Fragment></React.Fragment>
 		);
 	}
 }

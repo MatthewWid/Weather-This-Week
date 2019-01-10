@@ -1,9 +1,14 @@
 import React, {Component} from "react";
+import ForecastDayCard from "./ForecastDayCard";
 
 class WeekInformation extends Component {
 	render() {
+		console.log(this.props);
+
 		return (
-			<React.Fragment></React.Fragment>
+			<section className="weather-forecast">
+				<ForecastDayCard />
+			</section>
 		);
 	}
 }

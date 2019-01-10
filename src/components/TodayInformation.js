@@ -4,7 +4,6 @@ import "./TodayInformation.css";
 class TodayInformation extends Component {
 	render() {
 		const weather = this.props.current;
-		console.log(weather);
 
 		return (
 			<section className="weather-today">

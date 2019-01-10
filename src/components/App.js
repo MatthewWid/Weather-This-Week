@@ -3,6 +3,7 @@ import "./App.css";
 import config from "../config";
 import getLocation from "../helpers/getCurrentLocation";
 import WeatherInformation from "./WeatherInformation";
+import LoadingIndicator from "./LoadingIndicator";
 
 // TODO: API wrapper for making API calls with typing fetch(url)... every time
 
@@ -44,8 +45,7 @@ class App extends Component {
 		if (this.state.currentWeather && this.state.weeklyForecast) {
 			info = <WeatherInformation current={this.state.currentWeather} forecast={this.state.weeklyForecast} />;
 		} else {
-			// TODO: Loading spinner
-			info = <p>Loading...</p>
+			info = <LoadingIndicator />
 		}
 
 		return (

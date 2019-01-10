@@ -1,7 +1,7 @@
 .weather-today {
 	display: flex;
     border: 1px solid #EEE;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 10px 20px;
 }
 
@@ -10,8 +10,9 @@
 }
 
 .weather-today__title {
-	font-family: "Overlock", cursive;
+	font-family: "Staatliches", cursive;
 	font-size: 3rem;
+	letter-spacing: 1px;
 }
 
 .weather-today__data-value {

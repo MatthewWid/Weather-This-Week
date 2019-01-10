@@ -1,0 +1,14 @@
+.logo-title {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	font-family: "Overlock", cursive;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+
+.logo-title a {
+	color: #EEE;
+	text-decoration: none;
+}

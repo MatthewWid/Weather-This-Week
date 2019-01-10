@@ -5,10 +5,8 @@
 .loading-indicator div {
 	background-color: #EEE;
 	border-radius: 50%;
-
 	width: 20px;
 	height: 20px;
-
 	box-shadow: 2px 1px #AAA;
 
 	animation: jump 1s infinite ease-in-out;
@@ -20,15 +18,12 @@
 
 .loading-indicator div:nth-of-type(1) {
 	animation-delay: 0s;
-	/*0 to 1*/
 }
 .loading-indicator div:nth-of-type(2) {
 	animation-delay: .1s;
-	/*0.9 to 1.9*/
 }
 .loading-indicator div:nth-of-type(3) {
 	animation-delay: .2s;
-	/*1.8 to 2.8*/
 }
 
 @keyframes jump {

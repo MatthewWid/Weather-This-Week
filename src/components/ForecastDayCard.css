@@ -1,0 +1,13 @@
+.weather-forecast-card {
+	flex: 1;
+	text-align: center;
+}
+
+.weather-forecast-card__day, .weather-forecast-card__temp {
+	font-family: "Staatliches", cursive;
+	letter-spacing: 1px;
+}
+
+.weather-forecast-card__day--underline {
+	text-decoration: underline;
+}

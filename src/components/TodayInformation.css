@@ -5,7 +5,10 @@
     padding: 10px 20px;
 }
 
-.weather-today__section {
+h1.weather-today__section {
+	margin-right: 30px;
+}
+div.weather-today__section:not(:last-of-type) {
 	margin-right: 40px;
 }
 

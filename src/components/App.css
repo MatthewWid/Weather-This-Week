@@ -1,4 +1,6 @@
 .weather-app {
 	color: #EEE;
 	margin-top: -10vh;
+
+	min-width: 35vw;
 }

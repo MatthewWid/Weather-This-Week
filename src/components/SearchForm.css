@@ -1,0 +1,23 @@
+.search-form {
+	margin-bottom: 20px;
+}
+
+.search-form__input {
+	background: none;
+	border: none;
+	outline: 0;
+
+	border-bottom: 2px solid #EEE;
+	width: 50%;
+	transition: width .2s ease;
+	padding: 8px;
+
+	color: #EEE;
+	font-size: 1.4rem;
+}
+.search-form__input:focus {
+	width: 100%;
+}
+.search-form__input::placeholder {
+	color: #CCC;
+}

@@ -3,8 +3,6 @@ import "./ForecastDayCard.css";
 
 class ForecastDayCard extends Component {
 	render() {
-		console.log(this.props.weather);
-
 		return (
 			<div className="weather-forecast-card">
 				<div className={`weather-forecast-card__day${this.props.index === 0 ? " weather-forecast-card__day--underline" : ""}`}>

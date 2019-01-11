@@ -1,5 +1,6 @@
 .loading-indicator {
 	display: flex;
+	justify-content: center;
 }
 
 .loading-indicator div {

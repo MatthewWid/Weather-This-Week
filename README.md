@@ -8,6 +8,10 @@ Implements CSS-BEM methodologies.
 
 Live weather and forecast data pulled from the [OpenWeatherMap API](https://openweathermap.org/).
 
+<p align="center">
+    <img src="./doc/preview_demo.gif" alt="preview gif" width="90%" />
+</p>
+
 # Run Locally
 
 For development you may run this project on your own machine to build it yourself and make changes.

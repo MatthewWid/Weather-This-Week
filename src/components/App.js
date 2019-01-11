@@ -33,12 +33,6 @@ class App extends Component {
 					fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${config.API_KEY}`).then(stream => stream.json()),
 					fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${config.API_KEY}`).then(stream => stream.json())
 				]).then((values) => {
-					if (values[0].cod === "404" || values[1].cod === "404") {
-						this.setState({
-							stage: "error"
-						});
-						return;
-					}
 					this.setState({
 						currentWeather: values[0], // weather at this very moment
 						weeklyForecast: values[1], // weekly forecast

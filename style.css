@@ -1,0 +1,24 @@
+.logo-title {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	padding: 10px 20px;
+}
+
+.logo-title a {
+	color: #EEE;
+	text-decoration: none;
+	font-family: "Overlock", cursive;
+	display: block;
+}
+.logo-title a.logo {
+	font-size: 2rem;
+}
+.logo-title a.github {
+	text-align: right;
+	font-size: .8rem;
+}
+.logo-title a.github:hover {
+	text-decoration: underline;
+}

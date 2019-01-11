@@ -1,6 +1,8 @@
 .loading-indicator {
 	display: flex;
 	justify-content: center;
+	height: 30px;
+	padding-top: 30px;
 }
 
 .loading-indicator div {

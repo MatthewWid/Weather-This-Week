@@ -6,7 +6,7 @@ Automatically fetches your location and displays today's weather and a five-day 
 
 ### [View the live demo](https://matthewwid.github.io/Weather-This-Week/)
 
-Implements [CSS-BEM methodologies](http://getbem.com/).
+Implements [CSS-BEM methodologies](http://getbem.com/) and responsive design.
 
 Live weather and forecast data pulled from the [OpenWeatherMap API](https://openweathermap.org/).
 

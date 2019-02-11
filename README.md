@@ -36,6 +36,6 @@ For development you may run this project on your own machine to build it yoursel
 
 # Deploy
 
-Deployment is done using the [gh-pages NPM module](https://www.npmjs.com/package/gh-pages).
+Deployment is done using the [gh-pages npm module](https://www.npmjs.com/package/gh-pages).
 
 Simply fork the repository, [set up locally](#run-locally) and run `yarn deploy` or `npm run deploy`.

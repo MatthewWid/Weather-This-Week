@@ -1,5 +1,7 @@
 # ☀️ Weather This Week
 
+**This is not a tutorial follow-along.**
+
 A small single-page-application (SPA) weather viewer using [React](https://reactjs.org/), bootstrapped with [Create React App](https://facebook.github.io/create-react-app/).
 
 Automatically fetches your location and displays today's weather and a five-day forecast. Alternatively, search by city to receive up-to-date weather information about anywhere in the world.
